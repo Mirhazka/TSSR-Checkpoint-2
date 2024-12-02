@@ -78,7 +78,7 @@ Pour pouvoir *forcer* le ping en IPv4, il faut faire la commande `ping -4`.
 Je ne sais pas
 
 # Mise en pratique
-## Question 1
+## Question 11
 *Sans changer la configuration IPv4 des 2 machines, depuis le serveur montre le résultat d'un ping vers l'adresse IPv4 du client. Modifie la configuration IP statique sur le client pour que ce ping depuis le serveur soit fonctionnel. Montre le résultat de la commande `ipconfig /all` sur le client avec la nouvelle adresse IP. Montre le résultat d'un ping IPv4 du serveur vers le client.* <br>
 <br>
 
@@ -91,7 +91,7 @@ Voici le résultat de la commande `ipconfig /all` après modification de la nouv
 Voici le résultat d'un ping vers l'adresse IPv4 du client : <br>
 ![pingfailed](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingsuccess.png)
 
-## Question 2
+## Question 12
 *Mets le client CLIENT1 en DHCP. Montre le résultat de la commande `ipconfig /all` et des commandes possibles sur le client qui permettent d'avoir une nouvelle configuration IP. Montre le résultat d'un ping IPv4 du serveur vers le client.* <br>
 <br>
 
@@ -104,12 +104,50 @@ Voici le résultat des commandes possibles sur le client qui permettent d'avoir 
 Voici le résultat d'un ping vers l'adresse IPv4 du client : <br>
 ![pingfailed](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingsuccessDHCP.png)
 
-## Question 3
+## Question 13
 *Sur le serveur, modifie la configuration du service DHCP (sans supprimer la plage) pour que le client prenne une adresse IP entre 172.16.10.100 et 172.16.10.200. Montre les changements effectués sur le serveur. Montre le résultat de la commande `ipconfig /all` sur le client avec la nouvelle adresse IP.* <br>
 <br>
 
-Voici les changements effectués sur le serveur : <br>
+Pour modifier le scope, il faut aller dans l'outils DHPC. Puis faire un clique droit sur le scope et cliquez sur `Properties`. Une fenêtre s'ouvrira qui faudra modifier comme suit : <br>
 ![dhcpServer](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/dhcpServer.png)
 
 Voici le résultat de la commande `ipconfig /all` après la modification du scope du DHCP : <br>
 ![ipconfigAll](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/ipconfigALLNewScope.png)
+
+## Question 14
+*Sur le serveur, sans modifier les plages IP "bloquées", fais une modification pour que le client ai l'adresse IP 172.16.10.15. Montre le changement de configuration sur le serveur. Montre le résultat de la commande `ipconfig /all` sur le client avec la nouvelle adresse IP.*<br>
+<br>
+
+Dans un premier temps, il faut connaitre l'adresse MAC de la machine cliente, qui est : BC-24-11-F5-95-D2. <br>
+Maintenant, sur le serveur avec l'outils DHCP, il faut faire une réservation avec cette adresse MAC. Voici les modifications une fois faites : <br>
+![reservations](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/reservations.png)
+
+Voici le résultat de la commande `ipconfig /all` après la modification du DHCP : <br>
+![ipconfigALLreservations](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/ipconfigALLreservations.png)
+
+## Question 15
+*Sans changer la configuration IPv6 des 2 machines, montre le résultat d'un ping IPv6 du serveur vers le client.*
+
+Voici le résultat d'un ping vers l'adresse IPv6 du client : <br>
+![pingIPv6](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingIPv6.png)
+
+## Question 16
+*Sur le serveur, mets en place une configuration DHCPv6 avec le préfixe `fd01:2345:6789:abcd::/64`. Ajoute 2 plages d'exclusions : De `fd01:2345:6789:abcd::1` à `fd01:2345:6789:abcd::13` & De `fd01:2345:6789:abcd::fff1` à `fd01:2345:6789:abcd::fffe`. Montre le changement de configuration sur le serveur.*<br>
+<br>
+
+Voici le changement de configuration sur le serveur : <br>
+![dhcpV6](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/dhcpV6.png)
+
+## Question 17
+*Depuis le client, fais un ping vers le serveur avec le nom du serveur. Montre le résultat du ping avec une adresse IP de sortie en IPv4.* <br>
+<br>
+
+Voici le résultat du ping vers le serveur avec le nom du serveur : <br>
+![pingServer](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingServer.png)
+
+## Question 18
+*Depuis le serveur, fais un ping vers le client avec le nom du client. Modifie la configuration sur le serveur pour que ce ping soit fonctionnel, et qu'un ping vers CLIENT_TEST fonctionne également pour la même machine cliente. Montre le changement de configuration sur le serveur. Montre le résultat d'un ping depuis le serveur vers CLIENT_TEST en utilisant le nom de la machine.* <br>
+<br>
+
+Lors de la réservation d'adresse IP, nous avons donné un nom pour cette adresse **CLIENT1**, de ce fait le ping fonctionne :
+![pingCLIENT1](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingCLIENT1.png)
