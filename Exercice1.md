@@ -54,11 +54,15 @@ Vous avez deux possibilités :
 Cette adresse IPv6 est l'adresse locale lien (Link local) et elle sert à joindre les voisins sur un même lien (sous-réseau).
 
 ## Question 6
-*Quel autre type d'adresse IPv6 peut-on avoir sur une machine ? Précise le type, le préfixe, et la porté.*
+*Quel autre type d'adresse IPv6 peut-on avoir sur une machine ? Précise le type, le préfixe, et la porté.*<br>
+<br>
+
 Je ne sais pas.
 
 ## Question 7
-*Est-il possible de configurer le service DHCPv6 sur le serveur SRVWIN01 avec des préfixes d'adresses Unicast Locales Uniques ? Dans ce cas, si le client a une configuration IP en DHCP, est-ce qu'il va avoir automatiquement une adresse IPv6 Unicast Locales Uniques ?*
+*Est-il possible de configurer le service DHCPv6 sur le serveur SRVWIN01 avec des préfixes d'adresses Unicast Locales Uniques ? Dans ce cas, si le client a une configuration IP en DHCP, est-ce qu'il va avoir automatiquement une adresse IPv6 Unicast Locales Uniques ?*<br>
+<br>
+
 Je ne sais pas.
 
 ## Question 8
@@ -74,7 +78,9 @@ Le retour de la commande ping avec le nom d'une machine est une adresse IPv6 par
 Pour pouvoir *forcer* le ping en IPv4, il faut faire la commande `ping -4`.
 
 ## Question 10
-*À partir du serveur, je veux pouvoir faire un ping vers le client à partir de son nom, et également avec un alias de ce nom, par exemple CLIENT_TEST, comment procéder ?*
+*À partir du serveur, je veux pouvoir faire un ping vers le client à partir de son nom, et également avec un alias de ce nom, par exemple CLIENT_TEST, comment procéder ?* <br>
+<br>
+
 Je ne sais pas
 
 # Mise en pratique
