@@ -78,5 +78,28 @@ Pour pouvoir *forcer* le ping en IPv4, il faut faire la commande `ping -4`.
 Je ne sais pas
 
 # Mise en pratique
-# Question 1
-*Sans changer la configuration IPv4 des 2 machines, depuis le serveur montre le résultat d'un ping vers l'adresse IPv4 du client. Modifie la configuration IP statique sur le client pour que ce ping depuis le serveur soit fonctionnel. Montre le résultat de la commande `ipconfig /all` sur le client avec la nouvelle adresse IP. Montre le résultat d'un ping IPv4 du serveur vers le client.*
+## Question 1
+*Sans changer la configuration IPv4 des 2 machines, depuis le serveur montre le résultat d'un ping vers l'adresse IPv4 du client. Modifie la configuration IP statique sur le client pour que ce ping depuis le serveur soit fonctionnel. Montre le résultat de la commande `ipconfig /all` sur le client avec la nouvelle adresse IP. Montre le résultat d'un ping IPv4 du serveur vers le client.* <br>
+<br>
+
+Voici le résultat d'un ping vers l'adresse IPv4 du client : <br>
+![pingfailed](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingfailed.png)
+
+Voici le résultat de la commande `ipconfig /all` après modification de la nouvelle adresse IP sur le client : <br>
+![ipconfigAll](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/ipconfigAll.png)
+
+Voici le résultat d'un ping vers l'adresse IPv4 du client : <br>
+![pingfailed](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingsuccess.png)
+
+## Question 2
+*Mets le client CLIENT1 en DHCP. Montre le résultat de la commande `ipconfig /all` et des commandes possibles sur le client qui permettent d'avoir une nouvelle configuration IP. Montre le résultat d'un ping IPv4 du serveur vers le client.* <br>
+<br>
+
+Voici le résultat de la commande `ipconfig /all` après l'ajout du CLIENT1 en DHCP : <br>
+![ipconfigAll](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/ipconfigAllDHCP.png)
+
+Voici le résultat des commandes possibles sur le client qui permettent d'avoir une nouvelle configuration IP.
+![ipconfigReleaseRenew](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/ipconfigReleaseRenew.png)
+
+Voici le résultat d'un ping vers l'adresse IPv4 du client : <br>
+![pingfailed](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingsuccessDHCP.png)
