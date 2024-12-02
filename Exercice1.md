@@ -98,8 +98,18 @@ Voici le résultat d'un ping vers l'adresse IPv4 du client : <br>
 Voici le résultat de la commande `ipconfig /all` après l'ajout du CLIENT1 en DHCP : <br>
 ![ipconfigAll](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/ipconfigAllDHCP.png)
 
-Voici le résultat des commandes possibles sur le client qui permettent d'avoir une nouvelle configuration IP.
+Voici le résultat des commandes possibles sur le client qui permettent d'avoir une nouvelle configuration IP : <br>
 ![ipconfigReleaseRenew](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/ipconfigReleaseRenew.png)
 
 Voici le résultat d'un ping vers l'adresse IPv4 du client : <br>
 ![pingfailed](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/pingsuccessDHCP.png)
+
+## Question 3
+*Sur le serveur, modifie la configuration du service DHCP (sans supprimer la plage) pour que le client prenne une adresse IP entre 172.16.10.100 et 172.16.10.200. Montre les changements effectués sur le serveur. Montre le résultat de la commande `ipconfig /all` sur le client avec la nouvelle adresse IP.* <br>
+<br>
+
+Voici les changements effectués sur le serveur : <br>
+![dhcpServer](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/dhcpServer.png)
+
+Voici le résultat de la commande `ipconfig /all` après la modification du scope du DHCP : <br>
+![ipconfigAll](https://github.com/Mirhazka/TSSR-Checkpoint-2/blob/main/Image/exercice1/ipconfigALLNewScope.png)
